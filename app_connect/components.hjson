@@ -1,0 +1,464 @@
+{
+    "components": [
+        {
+            "type": "dmx-cropper",
+            "selector": "dmx-cropper, [is=dmx-cropper]",
+            "groupTitle": "Images",
+            "groupIcon": "fa fa-lg fa-file-image-o",
+            "title": "cropper : @@id@@",
+            "icon": "fa fa-lg fa-crop",
+            "state": "opened",
+            "anyParent": true,
+            "template": '<dmx-cropper id="@@id@@"></dmx-cropper>',
+            "baseName": "cropper",
+            "help": "cropper component for data display",
+            "dataScheme": [
+                {
+                    "name": "file",
+                    "title": "File",
+                    "type": "object",
+                    sub: [
+                        {name: "dataUrl", type: "string"},
+                    ]
+                },
+            ],
+            "outputType": "object",
+            "dataPick": true,
+            "children": [],
+            "allowed_children": {
+                "form": true
+            },
+            "properties": [
+                {
+                    "group": "Cropper Properties",
+                    "variables": [
+                        {
+                        "name": "id",
+                        "attribute": "id",
+                        "title": "ID",
+                        "type": "text",
+                        "required": true,
+                        "help": "Unique ID"
+                        },
+                        {
+                        "name": "src",
+                        "attribute": "dmx-bind:src",
+                        "title": "Src",
+                        "type": "text",
+                        "dataBindings": true,
+                        "defaultValue": [],
+                        "help": "Image Src"
+                        },
+                        {
+                            "name": "fieldName",
+                            "attribute": "dmx-bind:field_name",
+                            "title": "Field Name",
+                            "type": "text",
+                            "defaultValue": "image",
+                            "help": "Define the field name of the cropper"
+                        },
+                    ]
+                },
+                {
+                    "group": "Cropper Options",
+                    "variables": [
+                        {
+                            "name": "viewMode",
+                            "attribute": "viewMode",
+                            "title": "View Mode",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the view mode of the cropper"
+                            },
+                            {
+                            "name": "dragMode",
+                            "attribute": "dragMode",
+                            "title": "Drag Mode",
+                            "type": "text",
+                            "defaultValue": "crop",
+                            "help": "Define the drag mode of the cropper"
+                            },
+                            
+                            {
+                            "name": "initialAspectRatio",
+                            "attribute": "initialAspectRatio",
+                            "title": "Initial Aspect Ratio",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the initial aspect ratio of the cropper"
+                            },
+                            {
+                            "name": "aspectRatio",
+                            "attribute": "aspectRatio",
+                            "title": "Aspect Ratio",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the aspect ratio of the cropper"
+                            },
+                            {
+                            "name": "noresponsive",
+                            "attribute": "dmx-bind:noresponsive",
+                            "title": "No Responsive",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable responsiveness of the cropper"
+                            },
+                            {
+                            "name": "restore",
+                            "attribute": "dmx-bind:restore",
+                            "title": "Restore",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Enable restoring of the cropper"
+                            },
+                            {
+                            "name": "noCheckCrossOrigin",
+                            "attribute": "dmx-bind:noCheckCrossOrigin",
+                            "title": "No Check Cross Origin",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable checking cross origin of the cropper"
+                            },
+                            {
+                            "name": "noCheckOrientation",
+                            "attribute": "dmx-bind:noCheckOrientation",
+                            "title": "No Check Orientation",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable checking orientation of the cropper"
+                            },
+                            {
+                            "name": "noModal",
+                            "attribute": "dmx-bind:noModal",
+                            "title": "No Modal",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable modal of the cropper"
+                            },
+                            {
+                            "name": "noGuides",
+                            "attribute": "dmx-bind:noGuides",
+                            "title": "No Guides",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable guides of the cropper"
+                            },
+                            {
+                            "name": "noCenter",
+                            "attribute": "dmx-bind:noCenter",
+                            "title": "No Center",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable centering of the cropper"
+                            },
+                            {
+                            "name": "noHighlight",
+                            "attribute": "dmx-bind:noHighlight",
+                            "title": "No Highlight",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable highlighting of the cropper"
+                            },
+                            {
+                            "name": "noBackground",
+                            "attribute": "dmx-bind:noBackground",
+                            "title": "No Background",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable background of the cropper"
+                            },
+                            {
+                            "name": "no_auto_crop",
+                            "attribute": "dmx-bind:no_auto_crop",
+                            "title": "No Auto Crop",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable auto cropping of the cropper"
+                            },
+                            {
+                            "name": "auto_crop_area",
+                            "attribute": "dmx-bind:auto_crop_area",
+                            "title": "Auto Crop Area",
+                            "type": "number",
+                            "defaultValue": 0.8,
+                            "help": "Define the auto crop area of the cropper"
+                            },
+                            {
+                            "name": "noMovable",
+                            "attribute": "dmx-bind:noMovable",
+                            "title": "No Movable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable moving of the cropper"
+                            },
+                            {
+                            "name": "noRotable",
+                            "attribute": "dmx-bind:noRotable",
+                            "title": "No Rotable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable rotating of the cropper"
+                            },
+                            {
+                            "name": "noScalable",
+                            "attribute": "dmx-bind:noScalable",
+                            "title": "No Scalable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable scaling of the cropper"
+                            },
+                            {
+                            "name": "noZoomable",
+                            "attribute": "dmx-bind:noZoomable",
+                            "title": "No Zoomable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable zooming of the cropper"
+                            },
+                            {
+                            "name": "noZoomOnTouch",
+                            "attribute": "dmx-bind:noZoomOnTouch",
+                            "title": "No Zoom On Touch",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable zooming on touch of the cropper"
+                            },
+                            {
+                            "name": "noZoomOnWheel",
+                            "attribute": "dmx-bind:noZoomOnWheel",
+                            "title": "No Zoom On Wheel",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable zooming on wheel of the cropper"
+                            },
+                            {
+                            "name": "wheelZoomRatio",
+                            "attribute": "wheelZoomRatio",
+                            "title": "Wheel Zoom Ratio",
+                            "type": "number",
+                            "defaultValue": 0.1,
+                            "help": "Define the wheel zoom ratio of the cropper"
+                            },
+                            {
+                            "name": "noCropBoxMovable",
+                            "attribute": "dmx-bind:noCropBoxMovable",
+                            "title": "No Crop Box Movable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable moving the crop box of the cropper"
+                            },
+                            {
+                            "name": "noCropBoxResizable",
+                            "attribute": "dmx-bind:noCropBoxResizable",
+                            "title": "No Crop Box Resizable",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable resizing the crop box of the cropper"
+                            },
+                            {
+                            "name": "noToggleDragModeOnDblclick",
+                            "attribute": "dmx-bind:noToggleDragModeOnDblclick",
+                            "title": "No Toggle Drag Mode On Dblclick",
+                            "type": "boolean",
+                            "defaultValue": false,
+                            "help": "Disable toggling drag mode on double click of the cropper"
+                            },
+                            {
+                            "name": "minContainerWidth",
+                            "attribute": "minContainerWidth",
+                            "title": "Min Container Width",
+                            "type": "number",
+                            "defaultValue": 200,
+                            "help": "Define the minimum container width of the cropper"
+                            },
+                            {
+                            "name": "minContainerHeigth",
+                            "attribute": "minContainerHeigth",
+                            "title": "Min Container Height",
+                            "type": "number",
+                            "defaultValue": 100,
+                            "help": "Define the minimum container height of the cropper"
+                            },
+                            {
+                            "name": "minCanvasWidth",
+                            "attribute": "minCanvasWidth",
+                            "title": "Min Canvas Width",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the minimum canvas width of the cropper"
+                            },
+                            {
+                            "name": "minCanvasHeight",
+                            "attribute": "minCanvasHeight",
+                            "title": "Min Canvas Height",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the minimum canvas height of the cropper"
+                            },
+                            {
+                            "name": "minCropboxWidth",
+                            "attribute": "minCropboxWidth",
+                            "title": "Min Cropbox Width",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the minimum crop box width of the cropper"
+                            },
+                            {
+                            "name": "minCropboxHeight",
+                            "attribute": "minCropboxHeight",
+                            "title": "Min Cropbox Height",
+                            "type": "number",
+                            "defaultValue": 0,
+                            "help": "Define the minimum crop box height of the cropper"
+                            }
+                        
+                    ]
+                }
+            ],
+            
+            actionsScheme: [
+                {
+                addTitle: 'crop',
+                title : 'Crop',
+                name : 'crop',
+                icon : 'fa fa-lg fa-crop',
+                state : 'opened',
+                help: 'Crop the image',
+                properties : [
+
+                ]
+                }
+            ],
+            "copyFiles": [
+                {
+                    "src": "dmx-cropper.js",
+                    "dst": "js/dmx-cropper.js"
+                },
+                {
+                    "src": "../../../node_modules/cropperjs/dist/cropper.min.js",
+                    "dst": "js/cropper.min.js"
+                },
+                {
+                    "src": "../../../node_modules/cropperjs/dist/cropper.min.css",
+                    "dst": "js/cropper.min.css"
+                },
+            ],
+            "linkFiles": [
+                {
+                    "src": "js/dmx-cropper.js",
+                    "type": "js",
+                    "defer": true
+                }
+            ],
+            "cssOrder": [],
+            "jsOrder": []
+        }
+    ],
+    "attributes": [
+    {
+      "name": "cropperFieldName",
+      "attributeStartsWith": "dmx-bind",
+      "attribute": "fields_name",
+      "title": "Field Name",
+      "type": "boolean",
+      "display": "fieldset",
+      "icon": "fa fa-lg fa-edit",
+      "groupTitle": "Configs",
+      "groupIcon": "fa fa-lg fa-cog"
+      "defaultValue": false,
+      "show": [
+        "fieldParamName"
+      ],
+      "noChangeOnHide": true,
+      "groupEnabler": true,
+      "children": [
+        {
+            "name": "fieldParamName",
+            "attribute": "field_name",
+            "title": "Field Name",
+            "type": "text",
+            "defaultValue": "image",
+            "help": "Set the param to be attached in the form"
+        },
+      ],
+    "allowedOn": {
+        "dmx-cropper": true,
+         "form": true
+      }
+    },
+
+    {
+      "name": "cropperCropArea",
+      "attributeStartsWith": "dmx-bind",
+      "attribute": "auto_crop_areas",
+      "title": "Auto Crop Area",
+      "type": "boolean",
+      "display": "fieldset",
+      "icon": "fa fa-lg fa-crop-alt",
+      "groupTitle": "Configs",
+      "groupIcon": "fa fa-lg fa-cog"
+      "defaultValue": false,
+      "show": [
+        "autoCropArea"
+      ],
+      "noChangeOnHide": true,
+      "groupEnabler": true,
+      "children": [
+        {
+            "name": "autoCropArea",
+            "attribute": "auto_crop_area",
+            "title": "Auto Crop Area",
+            "type": "number",
+            "defaultValue": 0.8,
+            "help": "Set the auto crop area"
+        },
+      ],
+       "allowedOn": {
+        "dmx-cropper": true,
+        "form": true
+        }
+    },
+
+    ],
+    "events": [
+    {
+        "name": "cropped",
+        "attributeStartsWith": "dmx-on",
+        "attribute": "cropped",
+        "display": "fieldset",
+        "title": "Cropped",
+        "icon": "fa fa-lg fa-crop",
+        "groupTitle": "cropper Events",
+        "groupIcon": "fa fa-lg fa-crop",
+        "defaultValue": false,
+        "show": [
+            "cropEvent"
+        ],
+        "noChangeOnHide": true,
+        "type": "boolean",
+        "groupEnabler": true,
+        "children": [
+        {
+            "name": "cropEvent",
+            "attributeStartsWith": "dmx-on",
+            "attribute": "crop_event",
+            "isValue": true,
+            "actionsPicker": true,
+            "title": "Action:",
+            "type": "text",
+            "help": "Choose the action to execute on crop event",
+            "defaultValue": "",
+            "initDisplay": "none"
+        }
+        ],
+        "allowedOn": {
+            "dmx-cropper": true,
+            "form": true
+
+        }
+    },  
+         
+    ],
+    "static_events": []
+    
+}

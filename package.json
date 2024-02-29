@@ -1,0 +1,23 @@
+{
+    "name": "@cdmx/wappler_ac_cropperjs",
+    "version": "0.0.1",
+    "type": "module",
+    "description": "App Connect module for CropperJS",
+    "license": "MIT",
+    "author": {
+        "name": "cdmx1",
+        "url": "https://github.com/cdmx1"
+    },
+    "keywords": [
+        "wappler-extension",
+        "app-connect",
+        "cropperjs"
+    ],
+    "scripts": {
+        "build": "rollup --config",
+        "publish-dry-run": "npm publish ./dist --access public --dry-run"
+    },
+    "dependencies": {
+        "cropperjs": "~1.6.1"
+    }
+}
