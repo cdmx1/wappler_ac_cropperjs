@@ -1,6 +1,6 @@
 {
     "name": "@cdmx/wappler_ac_cropperjs",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "type": "module",
     "description": "App Connect module for CropperJS",
     "license": "MIT",

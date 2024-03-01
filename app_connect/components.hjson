@@ -1,17 +1,17 @@
 {
     "components": [
         {
-            "type": "dmx-cropper",
-            "selector": "dmx-cropper, [is=dmx-cropper]",
+            "type": "dmx-cropperjs",
+            "selector": "dmx-cropperjs, [is=dmx-cropperjs]",
             "groupTitle": "Images",
             "groupIcon": "fa fa-lg fa-file-image-o",
-            "title": "cropper : @@id@@",
+            "title": "CropperJS : @@id@@",
             "icon": "fa fa-lg fa-crop",
             "state": "opened",
             "anyParent": true,
-            "template": '<dmx-cropper id="@@id@@"></dmx-cropper>',
-            "baseName": "cropper",
-            "help": "cropper component for data display",
+            "template": '<dmx-cropperjs id="@@id@@"></dmx-cropperjs>',
+            "baseName": "cropperjs",
+            "help": "CropperJS component for data display",
             "dataScheme": [
                 {
                     "name": "file",
@@ -30,7 +30,7 @@
             },
             "properties": [
                 {
-                    "group": "Cropper Properties",
+                    "group": "CropperJS Properties",
                     "variables": [
                         {
                         "name": "id",
@@ -55,12 +55,12 @@
                             "title": "Field Name",
                             "type": "text",
                             "defaultValue": "image",
-                            "help": "Define the field name of the cropper"
+                            "help": "Define the field name of the CropperJS"
                         },
                     ]
                 },
                 {
-                    "group": "Cropper Options",
+                    "group": "CropperJS Options",
                     "variables": [
                         {
                             "name": "viewMode",
@@ -68,7 +68,7 @@
                             "title": "View Mode",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the view mode of the cropper"
+                            "help": "Define the view mode of the CropperJS"
                             },
                             {
                             "name": "dragMode",
@@ -76,7 +76,7 @@
                             "title": "Drag Mode",
                             "type": "text",
                             "defaultValue": "crop",
-                            "help": "Define the drag mode of the cropper"
+                            "help": "Define the drag mode of the CropperJS"
                             },
                             
                             {
@@ -85,7 +85,7 @@
                             "title": "Initial Aspect Ratio",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the initial aspect ratio of the cropper"
+                            "help": "Define the initial aspect ratio of the CropperJS"
                             },
                             {
                             "name": "aspectRatio",
@@ -93,7 +93,7 @@
                             "title": "Aspect Ratio",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the aspect ratio of the cropper"
+                            "help": "Define the aspect ratio of the CropperJS"
                             },
                             {
                             "name": "noresponsive",
@@ -101,7 +101,7 @@
                             "title": "No Responsive",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable responsiveness of the cropper"
+                            "help": "Disable responsiveness of the CropperJS"
                             },
                             {
                             "name": "restore",
@@ -109,7 +109,7 @@
                             "title": "Restore",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Enable restoring of the cropper"
+                            "help": "Enable restoring of the CropperJS"
                             },
                             {
                             "name": "noCheckCrossOrigin",
@@ -117,7 +117,7 @@
                             "title": "No Check Cross Origin",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable checking cross origin of the cropper"
+                            "help": "Disable checking cross origin of the CropperJS"
                             },
                             {
                             "name": "noCheckOrientation",
@@ -125,7 +125,7 @@
                             "title": "No Check Orientation",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable checking orientation of the cropper"
+                            "help": "Disable checking orientation of the CropperJS"
                             },
                             {
                             "name": "noModal",
@@ -133,7 +133,7 @@
                             "title": "No Modal",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable modal of the cropper"
+                            "help": "Disable modal of the CropperJS"
                             },
                             {
                             "name": "noGuides",
@@ -141,7 +141,7 @@
                             "title": "No Guides",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable guides of the cropper"
+                            "help": "Disable guides of the CropperJS"
                             },
                             {
                             "name": "noCenter",
@@ -149,7 +149,7 @@
                             "title": "No Center",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable centering of the cropper"
+                            "help": "Disable centering of the CropperJS"
                             },
                             {
                             "name": "noHighlight",
@@ -157,7 +157,7 @@
                             "title": "No Highlight",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable highlighting of the cropper"
+                            "help": "Disable highlighting of the CropperJS"
                             },
                             {
                             "name": "noBackground",
@@ -165,7 +165,7 @@
                             "title": "No Background",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable background of the cropper"
+                            "help": "Disable background of the CropperJS"
                             },
                             {
                             "name": "no_auto_crop",
@@ -173,7 +173,7 @@
                             "title": "No Auto Crop",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable auto cropping of the cropper"
+                            "help": "Disable auto cropping of the CropperJS"
                             },
                             {
                             "name": "auto_crop_area",
@@ -181,7 +181,7 @@
                             "title": "Auto Crop Area",
                             "type": "number",
                             "defaultValue": 0.8,
-                            "help": "Define the auto crop area of the cropper"
+                            "help": "Define the auto crop area of the CropperJS"
                             },
                             {
                             "name": "noMovable",
@@ -189,7 +189,7 @@
                             "title": "No Movable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable moving of the cropper"
+                            "help": "Disable moving of the CropperJS"
                             },
                             {
                             "name": "noRotable",
@@ -197,7 +197,7 @@
                             "title": "No Rotable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable rotating of the cropper"
+                            "help": "Disable rotating of the CropperJS"
                             },
                             {
                             "name": "noScalable",
@@ -205,7 +205,7 @@
                             "title": "No Scalable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable scaling of the cropper"
+                            "help": "Disable scaling of the CropperJS"
                             },
                             {
                             "name": "noZoomable",
@@ -213,7 +213,7 @@
                             "title": "No Zoomable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable zooming of the cropper"
+                            "help": "Disable zooming of the CropperJS"
                             },
                             {
                             "name": "noZoomOnTouch",
@@ -221,7 +221,7 @@
                             "title": "No Zoom On Touch",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable zooming on touch of the cropper"
+                            "help": "Disable zooming on touch of the CropperJS"
                             },
                             {
                             "name": "noZoomOnWheel",
@@ -229,7 +229,7 @@
                             "title": "No Zoom On Wheel",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable zooming on wheel of the cropper"
+                            "help": "Disable zooming on wheel of the CropperJS"
                             },
                             {
                             "name": "wheelZoomRatio",
@@ -237,7 +237,7 @@
                             "title": "Wheel Zoom Ratio",
                             "type": "number",
                             "defaultValue": 0.1,
-                            "help": "Define the wheel zoom ratio of the cropper"
+                            "help": "Define the wheel zoom ratio of the CropperJS"
                             },
                             {
                             "name": "noCropBoxMovable",
@@ -245,7 +245,7 @@
                             "title": "No Crop Box Movable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable moving the crop box of the cropper"
+                            "help": "Disable moving the crop box of the CropperJS"
                             },
                             {
                             "name": "noCropBoxResizable",
@@ -253,7 +253,7 @@
                             "title": "No Crop Box Resizable",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable resizing the crop box of the cropper"
+                            "help": "Disable resizing the crop box of the CropperJS"
                             },
                             {
                             "name": "noToggleDragModeOnDblclick",
@@ -261,7 +261,7 @@
                             "title": "No Toggle Drag Mode On Dblclick",
                             "type": "boolean",
                             "defaultValue": false,
-                            "help": "Disable toggling drag mode on double click of the cropper"
+                            "help": "Disable toggling drag mode on double click of the CropperJS"
                             },
                             {
                             "name": "minContainerWidth",
@@ -269,7 +269,7 @@
                             "title": "Min Container Width",
                             "type": "number",
                             "defaultValue": 200,
-                            "help": "Define the minimum container width of the cropper"
+                            "help": "Define the minimum container width of the CropperJS"
                             },
                             {
                             "name": "minContainerHeigth",
@@ -277,7 +277,7 @@
                             "title": "Min Container Height",
                             "type": "number",
                             "defaultValue": 100,
-                            "help": "Define the minimum container height of the cropper"
+                            "help": "Define the minimum container height of the CropperJS"
                             },
                             {
                             "name": "minCanvasWidth",
@@ -285,7 +285,7 @@
                             "title": "Min Canvas Width",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the minimum canvas width of the cropper"
+                            "help": "Define the minimum canvas width of the CropperJS"
                             },
                             {
                             "name": "minCanvasHeight",
@@ -293,7 +293,7 @@
                             "title": "Min Canvas Height",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the minimum canvas height of the cropper"
+                            "help": "Define the minimum canvas height of the CropperJS"
                             },
                             {
                             "name": "minCropboxWidth",
@@ -301,7 +301,7 @@
                             "title": "Min Cropbox Width",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the minimum crop box width of the cropper"
+                            "help": "Define the minimum crop box width of the CropperJS"
                             },
                             {
                             "name": "minCropboxHeight",
@@ -309,7 +309,7 @@
                             "title": "Min Cropbox Height",
                             "type": "number",
                             "defaultValue": 0,
-                            "help": "Define the minimum crop box height of the cropper"
+                            "help": "Define the minimum crop box height of the CropperJS"
                             }
                         
                     ]
@@ -331,8 +331,8 @@
             ],
             "copyFiles": [
                 {
-                    "src": "dmx-cropper.js",
-                    "dst": "js/dmx-cropper.js"
+                    "src": "dmx-cropperjs.js",
+                    "dst": "js/dmx-cropperjs.js"
                 },
                 {
                     "src": "../../../node_modules/cropperjs/dist/cropper.min.js",
@@ -345,7 +345,7 @@
             ],
             "linkFiles": [
                 {
-                    "src": "js/dmx-cropper.js",
+                    "src": "js/dmx-cropperjs.js",
                     "type": "js",
                     "defer": true
                 }
@@ -356,7 +356,7 @@
     ],
     "attributes": [
     {
-      "name": "cropperFieldName",
+      "name": "cropperjsFieldName",
       "attributeStartsWith": "dmx-bind",
       "attribute": "fields_name",
       "title": "Field Name",
@@ -382,13 +382,13 @@
         },
       ],
     "allowedOn": {
-        "dmx-cropper": true,
+        "dmx-cropperjs": true,
          "form": true
       }
     },
 
     {
-      "name": "cropperCropArea",
+      "name": "cropperjsCropArea",
       "attributeStartsWith": "dmx-bind",
       "attribute": "auto_crop_areas",
       "title": "Auto Crop Area",
@@ -414,7 +414,7 @@
         },
       ],
        "allowedOn": {
-        "dmx-cropper": true,
+        "dmx-cropperjs": true,
         "form": true
         }
     },
@@ -428,7 +428,7 @@
         "display": "fieldset",
         "title": "Cropped",
         "icon": "fa fa-lg fa-crop",
-        "groupTitle": "cropper Events",
+        "groupTitle": "CropperJS Events",
         "groupIcon": "fa fa-lg fa-crop",
         "defaultValue": false,
         "show": [
@@ -452,7 +452,7 @@
         }
         ],
         "allowedOn": {
-            "dmx-cropper": true,
+            "dmx-cropperjs": true,
             "form": true
 
         }

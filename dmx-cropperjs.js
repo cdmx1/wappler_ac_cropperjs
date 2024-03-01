@@ -1,5 +1,5 @@
 
-dmx.Component("cropper", {
+dmx.Component("cropperjs", {
     initialData: {
         file: null,
         cropper: null
