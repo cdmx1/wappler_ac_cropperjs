@@ -340,15 +340,25 @@
                 },
                 {
                     "src": "../../../node_modules/cropperjs/dist/cropper.min.css",
-                    "dst": "js/cropper.min.css"
-                },
+                    "dst": "css/cropper.min.css"
+                }
             ],
             "linkFiles": [
                 {
                     "src": "js/dmx-cropperjs.js",
                     "type": "js",
                     "defer": true
+                },
+                {
+                    "src": "js/cropper.min.js",
+                   "type": "js",
+                    "defer": true
+                },
+                {
+                    "src": "css/cropper.min.css",
+                    "type": "css"
                 }
+                 
             ],
             "cssOrder": [],
             "jsOrder": []
