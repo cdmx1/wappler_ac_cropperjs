@@ -9,7 +9,7 @@ dmx.Component("cropperjs", {
         src: { type: Array, default: null },
         viewMode: { type: Number, default: 0 },
         dragMode: { type: String, default: 'crop' },
-        field_name: { type: String, default: 'image'},
+        field_id: { type: String, default: 'image'},
         initialAspectRatio: { type: Number, default: NaN },
         aspectRatio: { type: Number, default: NaN },
         noresponsive: { type: Boolean, default: false },
@@ -139,23 +139,38 @@ dmx.Component("cropperjs", {
             this.data.file.size = atob(this.data.file.dataUrl.split(',')[1]).length
             this.data.file.type = this.data.file.dataUrl.substring(this.data.file.dataUrl.indexOf(":") + 1, this.data.file.dataUrl.indexOf(";"))
             this.dispatchEvent('cropped')
-            this.attachToForm(this.parent.$node.getAttribute('id'),this.props.field_name)
+            this.attachToForm(this.parent.$node.getAttribute('id'),this.props.field_id)
             dmx.requestUpdate()    
         },
         
         
     },
     
-    attachToForm: function (form, name) {
+    getImageNameFromId: function(imageID) {
+        // Get the image element
+        let image = document.getElementById(imageID);
+        if (image && image.src) {
+            var parts = image.src.split('/');
+            var fileName = parts[parts.length - 1];
+            return fileName;
+        } else {
+            return null;
+        }
+    },
+
+    attachToForm: function (form, id) {
         this.data.canvas.toBlob(function (blob) {
+            let name = this.getImageNameFromId(id)
             document.getElementById(form).dmxExtraData[name] = new File([blob], name, { lastModified: new Date().getTime(), type: blob.type });
             console.log(document.getElementById(form).dmxExtraData[name]);
         }.bind(this), this.data.type, this.data.encoder);
     },
 
-    resetAttachedValue: function (form, name) {
+    resetAttachedValue: function (form, id) {
+        let name = this.getImageNameFromId(id)
         document.getElementById(form).dmxExtraData[name] = "";
     }, 
+    
     
     events: { cropped: Event },
     update: function (props) {
@@ -169,7 +184,7 @@ dmx.Component("cropperjs", {
         wrapper.className = "cropper-container"
         parent.replaceChild(wrapper, this.$node);
         wrapper.appendChild(this.$node);
-        this.$node.innerHTML =  `<img id=${this.props.id + "-img"}>`;
+        this.$node.innerHTML =  `<img id=${this.props.field_id}>`;
     },
     init: function () {
         this.data.file = null
@@ -223,7 +238,7 @@ dmx.Component("cropperjs", {
         let parentForm = document.getElementById(this.parent.$node.getAttribute('id'));
         if(parentForm){
             parentForm.addEventListener('reset', function () {
-                this.resetAttachedValue(this.parent.$node.getAttribute('id'), this.props.field_name);
+                this.resetAttachedValue(this.parent.$node.getAttribute('id'), this.props.field_id);
             }.bind(this));
         }
        

@@ -50,12 +50,12 @@
                         "help": "Image Src"
                         },
                         {
-                            "name": "fieldName",
-                            "attribute": "dmx-bind:field_name",
-                            "title": "Field Name",
+                            "name": "fieldId",
+                            "attribute": "dmx-bind:field_id",
+                            "title": "Field ID",
                             "type": "text",
                             "defaultValue": "image",
-                            "help": "Define the field name of the CropperJS"
+                            "help": "Define the field id of the CropperJS"
                         },
                     ]
                 },
@@ -365,38 +365,6 @@
         }
     ],
     "attributes": [
-    {
-      "name": "cropperjsFieldName",
-      "attributeStartsWith": "dmx-bind",
-      "attribute": "fields_name",
-      "title": "Field Name",
-      "type": "boolean",
-      "display": "fieldset",
-      "icon": "fa fa-lg fa-edit",
-      "groupTitle": "Configs",
-      "groupIcon": "fa fa-lg fa-cog"
-      "defaultValue": false,
-      "show": [
-        "fieldParamName"
-      ],
-      "noChangeOnHide": true,
-      "groupEnabler": true,
-      "children": [
-        {
-            "name": "fieldParamName",
-            "attribute": "field_name",
-            "title": "Field Name",
-            "type": "text",
-            "defaultValue": "image",
-            "help": "Set the param to be attached in the form"
-        },
-      ],
-    "allowedOn": {
-        "dmx-cropperjs": true,
-         "form": true
-      }
-    },
-
     {
       "name": "cropperjsCropArea",
       "attributeStartsWith": "dmx-bind",
