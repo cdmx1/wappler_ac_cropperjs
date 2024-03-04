@@ -8,7 +8,7 @@ CropperJS is a custom app connect module that simplifies the process of adding i
 
 1. **ID**: Unique ID for the CropperJS. (Required)
 2. **Src**: Src of the image to be cropped. (Required)
-3. **Field ID**: Sets the param to be attached in the form. (Required)
+3. **Field ID**: Set the id of the image uploader. (Required)
 
 # CropperJS Component Options
 

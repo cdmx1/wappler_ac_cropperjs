@@ -146,28 +146,25 @@ dmx.Component("cropperjs", {
         
     },
     
-    getImageNameFromId: function(imageID) {
-        // Get the image element
-        let image = document.getElementById(imageID);
-        if (image && image.src) {
-            var parts = image.src.split('/');
-            var fileName = parts[parts.length - 1];
-            return fileName;
+    getInputNameById: function(inputId) {
+        let inputElement = document.getElementById(inputId);
+        if (inputElement) {
+          return inputElement.getAttribute('name');
         } else {
-            return null;
+          return null;
         }
     },
 
     attachToForm: function (form, id) {
         this.data.canvas.toBlob(function (blob) {
-            let name = this.getImageNameFromId(id)
+            let name = this.getInputNameById(id)
             document.getElementById(form).dmxExtraData[name] = new File([blob], name, { lastModified: new Date().getTime(), type: blob.type });
             console.log(document.getElementById(form).dmxExtraData[name]);
         }.bind(this), this.data.type, this.data.encoder);
     },
 
     resetAttachedValue: function (form, id) {
-        let name = this.getImageNameFromId(id)
+        let name = this.getInputNameById(id)
         document.getElementById(form).dmxExtraData[name] = "";
     }, 
     
@@ -184,7 +181,7 @@ dmx.Component("cropperjs", {
         wrapper.className = "cropper-container"
         parent.replaceChild(wrapper, this.$node);
         wrapper.appendChild(this.$node);
-        this.$node.innerHTML =  `<img id=${this.props.field_id}>`;
+        this.$node.innerHTML =  `<img id=${this.props.id + "-img"}>`;
     },
     init: function () {
         this.data.file = null

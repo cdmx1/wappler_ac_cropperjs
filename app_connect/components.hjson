@@ -55,7 +55,7 @@
                             "title": "Field ID",
                             "type": "text",
                             "defaultValue": "image",
-                            "help": "Define the field id of the CropperJS"
+                            "help": "Define the field id of the input uploader"
                         },
                     ]
                 },
