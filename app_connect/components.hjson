@@ -51,7 +51,7 @@
                         },
                         {
                             "name": "fieldId",
-                            "attribute": "dmx-bind:field_id",
+                            "attribute": "field_id",
                             "title": "Field ID",
                             "type": "text",
                             "defaultValue": "image",
